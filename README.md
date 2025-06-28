@@ -1,6 +1,5 @@
 # Final Project - Pemrograman Jaringan
 
-Proyek ini merupakan tugas akhir dari mata kuliah **Pemrograman Jaringan**. Kami membangun aplikasi [sebutkan nama/proyeknya], dengan fitur-fitur seperti [sebutkan singkat fitur utama].
 
 ## Anggota Kelompok
 
