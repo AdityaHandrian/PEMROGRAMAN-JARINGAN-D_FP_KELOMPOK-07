@@ -27,15 +27,15 @@ Berikut adalah langkah-langkah untuk menjalankn game Tic Tac Toe
   - Windows: ipconfig (alamat IPv4)
   - macOS/Linux: ifconfig atau ip a (inet
 - Catat IP address
-### 3. Ubah IP pada Client
+### 3. Ubah IP dan port pada Client
 - Buka client.py
-- Ubah IP address di baris berikut dengan IP address load balancer
+- Ubah IP address di baris berikut dengan IP address dan port load balancer
   ```
   BASE_URL = "http://10.8.195.69:8881"
   ```
-### 4. Ubah IP pada Load Balancer
+### 4. Ubah IP dan port pada Load Balancer
 - Buka load_balancer.py
-- Ubah IP address di baris berikut dengan IP address server
+- Ubah IP address di baris berikut dengan IP address dan port server
   ```
   backends = [
     'http://10.8.195.237:8889',
