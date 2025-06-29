@@ -4,9 +4,9 @@ import requests
 import threading
 
 backends = [
-    'http://localhost:8889',
-    'http://localhost:8890',
-    'http://localhost:8891'
+    'http://10.8.195.224:8889',
+    'http://10.8.195.224:8890',
+    'http://10.8.195.224:8891'
 ]
 
 room_mapping = {}  # room_id → backend server
