@@ -3,7 +3,7 @@ import requests
 import time
 
 # Ganti IP dan port sesuai server kamu
-BASE_URL = "http://10.8.188.50:8889"
+BASE_URL = "http://10.8.195.237:8889"
 
 PLAYER_ID = input("Masukkan ID kamu (X atau O): ").strip().upper()
 ROOM_ID = input("Masukkan nama room: ").strip()
@@ -32,7 +32,7 @@ pygame.display.set_caption("Tic Tac Toe Multiplayer")
 title_font = pygame.font.Font("assets/backup/SuperMario256.ttf", 38)
 info_font  = pygame.font.Font("assets/backup/Display Plan.ttf", 26)
 small_font = pygame.font.Font("assets/backup/Display Plan.ttf", 22)
-xo_font = pygame.font.Font("assets/backup/SuperMario256.ttf", 90)
+xo_font = pygame.font.Font("assets/backup/BaksoSapi.otf", 90)
 
 
 board = [['' for _ in range(3)] for _ in range(3)]
