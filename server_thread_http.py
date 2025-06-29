@@ -7,7 +7,7 @@ import logging
 from http_handler import HttpServer
 
 httpserver = HttpServer()
-
+PORT = 8889
 
 class ProcessTheClient(threading.Thread):
 	def __init__(self, connection, address):
@@ -53,8 +53,9 @@ class Server(threading.Thread):
 		threading.Thread.__init__(self)
 
 	def run(self):
-		self.my_socket.bind(('0.0.0.0', 8889))
+		self.my_socket.bind(('0.0.0.0', PORT))
 		self.my_socket.listen(1)
+		print(f"[ OK ] Server listening on port {PORT}")
 		while True:
 			self.connection, self.client_address = self.my_socket.accept()
 			logging.warning("connection from {}".format(self.client_address))
@@ -62,8 +63,6 @@ class Server(threading.Thread):
 			clt = ProcessTheClient(self.connection, self.client_address)
 			clt.start()
 			self.the_clients.append(clt)
-
-
 
 def main():
 	svr = Server()
