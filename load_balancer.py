@@ -2,6 +2,7 @@ import http.server
 import socketserver
 import requests
 import threading
+from urllib.parse import urlparse, parse_qs
 
 backends = [
     'http://10.8.195.224:8889',
@@ -58,11 +59,9 @@ class LoadBalancerHandler(http.server.SimpleHTTPRequestHandler):
                 return target
 
     def get_room_id_from_path(self):
-        # ambil room id dari path /status/room_id atau /move/room_id
-        parts = self.path.split('/')
-        if len(parts) >= 3 and parts[1] in ('status', 'move'):
-            return parts[2]
-        return None
+        parsed = urlparse(self.path)
+        qs = parse_qs(parsed.query)
+        return qs.get("room", [None])[0]
 
 def run_load_balancer():
     PORT = 8881
