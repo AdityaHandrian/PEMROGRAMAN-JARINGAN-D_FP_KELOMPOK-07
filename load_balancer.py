@@ -5,9 +5,9 @@ import threading
 from urllib.parse import urlparse, parse_qs
 
 backends = [
-    'http://10.8.195.224:8889',
-    'http://10.8.195.224:8890',
-    'http://10.8.195.224:8891'
+    'http://10.8.195.237:8889',
+    'http://10.8.195.237:8890',
+    'http://10.8.195.237:8891'
 ]
 
 room_mapping = {}  # room_id → backend server
