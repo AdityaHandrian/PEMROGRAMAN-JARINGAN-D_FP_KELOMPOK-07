@@ -43,12 +43,12 @@ Berikut adalah langkah-langkah untuk menjalankn game Tic Tac Toe
     'http://10.8.195.237:8891'
   ]
   ```
-### 4. Jalankan Server
+### 5. Jalankan Server
 Gunakan command `python server_thread_http.py`
-### 5. Jalankan healthy_check
+### 6. Jalankan healthy_check
 Gunakan command `python healthy_check.py` untuk memonitor kinerja server
-### 6. Jalankan Load Balancer
+### 7. Jalankan Load Balancer
 Gunakan command `load_balancer.py`
-### 7. Jalankan Client
+### 8. Jalankan Client
 Gunakan command `python client.py`
-### 8. Mulai Bermain
+### 9. Mulai Bermain
