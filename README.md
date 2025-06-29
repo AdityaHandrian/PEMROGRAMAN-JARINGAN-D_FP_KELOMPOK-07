@@ -1,7 +1,7 @@
 # Final Project - Pemrograman Jaringan - D
 
 
-## Anggota Kelompok
+## Anggota Kelompok - 7
 
 | No. | Nama                              | NRP        |
 |-----|-----------------------------------|------------|
