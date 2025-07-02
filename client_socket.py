@@ -3,14 +3,14 @@ import socket
 import time
 import json
 
-# Konfigurasi server
-HOST = '10.8.188.25'
-PORT = 8891
+#konfigurasi server
+HOST = '10.8.195.10'
+PORT = 8881
 
 PLAYER_ID = input("Masukkan ID kamu (X atau O): ").strip().upper()
 ROOM_ID = input("Masukkan nama room: ").strip()
 
-# Pygame UI setup
+#untuk tampilan pygame
 pygame.init()
 WIDTH, HEIGHT = 500, 510
 BG_COLOR = (224, 241, 244)
@@ -161,7 +161,7 @@ def get_winning_line(b):
 def draw_win_line(coords):
     pygame.draw.line(screen, WIN_LINE_COLOR, coords[0], coords[1], 6)
 
-# Main loop
+#mainloop
 register()
 draw_board()
 clock = pygame.time.Clock()

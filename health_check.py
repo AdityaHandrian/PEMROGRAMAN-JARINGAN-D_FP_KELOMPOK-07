@@ -2,9 +2,9 @@ import requests
 import time
 
 backends = [
-    'http://10.8.195.224:8889',
-    'http://10.8.195.224:8890',
-    'http://10.8.195.224:8891'
+    'http://10.8.195.10:8889',
+    'http://10.8.195.10:8890',
+    'http://10.8.195.10:8891'
 ]
 
 def check_server(url):

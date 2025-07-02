@@ -2,7 +2,7 @@ import pygame
 import requests
 import time
 
-# Ganti IP dan port sesuai server kamu
+#konfigurasi server, namun jika menggunakan lb, arahkan ke ip dan port lbnya
 BASE_URL = "http://10.8.188.25:8891"
 
 PLAYER_ID = input("Masukkan ID kamu (X atau O): ").strip().upper()
@@ -86,14 +86,14 @@ def send_move(row, col):
 def draw_board(hover_pos=None):
     screen.fill(BG_COLOR)
 
-    # Grid lines
+    #grid lines
     for i in range(1, 3):
         pygame.draw.line(screen, LINE_COLOR, (GRID_LEFT, BOARD_TOP + i*CELL_SIZE),
                          (GRID_LEFT+BOARD_SIZE, BOARD_TOP + i*CELL_SIZE), 3)
         pygame.draw.line(screen, LINE_COLOR, (GRID_LEFT + i*CELL_SIZE, BOARD_TOP),
                          (GRID_LEFT + i*CELL_SIZE, BOARD_TOP+BOARD_SIZE), 3)
 
-    # XO & hover
+    #XO & hover
     for r in range(3):
         for c in range(3):
             x = GRID_LEFT + c*CELL_SIZE + CELL_SIZE//2
@@ -106,16 +106,16 @@ def draw_board(hover_pos=None):
             elif hover_pos == (r, c):
                 pygame.draw.rect(screen, HOVER_COLOR, (GRID_LEFT + c*CELL_SIZE, BOARD_TOP + r*CELL_SIZE, CELL_SIZE, CELL_SIZE), border_radius=6)
     
-    # Winner line
+    #winner line
     if winner_coords:
         draw_win_line(winner_coords)
 
-    # Title
+    #judul
     title_surf = title_font.render("Tic Tac Toe", True, (0, 55, 61))
     title_rect = title_surf.get_rect(center=(WIDTH//2, 40))
     screen.blit(title_surf, title_rect)
 
-    # Giliran
+    #info giliran
     turn_info = f"Giliran: {current_turn or '?'}"
     turn_surf = info_font.render(turn_info, True, (255, 82, 3))
     turn_rect = turn_surf.get_rect(center=(WIDTH//2, INFO_TOP+20))
@@ -128,7 +128,7 @@ def draw_board(hover_pos=None):
     screen.blit(room_surf, (20, info_y))
     screen.blit(player_surf, (WIDTH - player_surf.get_width() - 20, info_y))
 
-    # Winner banner
+    #winner banner
     if winner_text:
         win_surf = info_font.render(winner_text, True, (255, 0, 0))
         win_rect = win_surf.get_rect(center=(WIDTH//2, 65))
@@ -153,7 +153,7 @@ def get_winning_line(b):
 def draw_win_line(coords):
     pygame.draw.line(screen, WIN_LINE_COLOR, coords[0], coords[1], 6)
 
-# Main Loop
+#mainloop
 register()
 draw_board()
 clock = pygame.time.Clock()
