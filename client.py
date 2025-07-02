@@ -3,7 +3,7 @@ import requests
 import time
 
 # Ganti IP dan port sesuai server kamu
-BASE_URL = "http://10.8.195.69:8881"
+BASE_URL = "http://10.8.188.25:8891"
 
 PLAYER_ID = input("Masukkan ID kamu (X atau O): ").strip().upper()
 ROOM_ID = input("Masukkan nama room: ").strip()
